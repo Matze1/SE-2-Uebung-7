@@ -127,10 +127,16 @@ public class KassenWerkzeug implements Beobachter
 
 	/**
 	 * Gibt bei beobachteten Änderungen,
-	 * wichtige Informationen an die SUbwerkzeuge weiter.
+	 * wichtige Informationen an die Subwerkzeuge weiter.
 	 */
 	public void BeachteAenderung(Object o) {
-		System.out.println("lol 1 Aenderung" + o);
-		
+		if (o == _datumAuswaehlWerkzeug)
+		{
+			_vorstellungAuswaehlWerkzeug.setTagesplan(_kino.getTagesplan(_datumAuswaehlWerkzeug.getSelektiertesDatum()));
+		}
+		if (o == _vorstellungAuswaehlWerkzeug)
+		{
+			_platzVerkaufsWerkzeug.setVorstellung(_vorstellungAuswaehlWerkzeug.getAusgewaehlteVorstellung());
+		}
 	}
 }
