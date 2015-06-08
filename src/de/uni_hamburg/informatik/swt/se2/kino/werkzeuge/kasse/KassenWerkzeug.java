@@ -125,9 +125,12 @@ public class KassenWerkzeug implements Beobachter
         return _vorstellungAuswaehlWerkzeug.getAusgewaehlteVorstellung();
     }
 
-	@Override
-	public void BeachteAenderung() {
-		System.out.println("lol 1 Aenderung");
+	/**
+	 * Gibt bei beobachteten Änderungen,
+	 * wichtige Informationen an die SUbwerkzeuge weiter.
+	 */
+	public void BeachteAenderung(Object o) {
+		System.out.println("lol 1 Aenderung" + o);
 		
 	}
 }

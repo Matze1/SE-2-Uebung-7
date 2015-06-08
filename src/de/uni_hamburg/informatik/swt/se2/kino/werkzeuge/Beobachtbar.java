@@ -16,11 +16,11 @@ public abstract class Beobachtbar
 		_Beobachter.add(b);
 	}
 	
-	public void meldeAenderung()
+	public void meldeAenderung(Object o)
 	{
 		for (Beobachter b : _Beobachter)
 		{
-			b.BeachteAenderung();
+			b.BeachteAenderung(o);
 		}
 	}
 }
